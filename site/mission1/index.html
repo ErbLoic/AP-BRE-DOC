@@ -465,6 +465,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Les parties complexe du codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -688,6 +716,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Les parties complexe du codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -729,7 +785,7 @@
 </ul>
 <h2 id="base-de-donnee">Base de donnée<a class="headerlink" href="#base-de-donnee" title="Permanent link">&para;</a></h2>
 <p>Ci-joint la photo du MCD</p>
-<p><img alt="MCD" src="../image/mcdmission1.JPG" /></p>
+<p><img alt="MCD" src="../image/mission1/mcdmission1.JPG" /></p>
 <p>On peut ajouter à ceci l'ajout de procedure stocké et des événements.</p>
 <p>L'événements sert à remettre des nouveaux congé tout les X du mois et l'autre à faire chaque an le reset du soldes de congé.</p>
 <p>Les procédures stocké sont appelé par les événements pour déclancher faire les modification.</p>
@@ -742,21 +798,145 @@
 <div class="language-sql highlight"><span class="filename">Remise Congé Annuelle</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">BEGIN</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">praticien</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">praticien</span><span class="p">.</span><span class="n">Ancien_Solde_Congé</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">praticien</span><span class="p">.</span><span class="n">Solde_congé</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">praticien</span><span class="p">.</span><span class="n">Solde_congé</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">praticien</span><span class="p">.</span><span class="n">Solde_congé</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">-</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">END</span>
 </span></code></pre></div>
 <h2 id="c">C&#35;<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <h3 id="composition-des-pages">Composition des pages<a class="headerlink" href="#composition-des-pages" title="Permanent link">&para;</a></h3>
 <h4 id="connexion">Connexion<a class="headerlink" href="#connexion" title="Permanent link">&para;</a></h4>
-<p><img alt="Connexion" src="../image/Cconnexion.JPG" /></p>
+<p><img alt="Connexion" src="../image/mission1/Cconnexion.JPG" /></p>
 <p>Nous remarquons les deux champs possible, <strong>adresse mail</strong> et <strong>mot de passe</strong> qui existe pour chaque praticiens de la base de données.</p>
 <h4 id="interface-utilisateur">Interface Utilisateur<a class="headerlink" href="#interface-utilisateur" title="Permanent link">&para;</a></h4>
-<p><img alt="InterfaceUser" src="../image/interfaceuserC.JPG" /></p>
+<p><img alt="InterfaceUser" src="../image/mission1/interfaceuserC.JPG" /></p>
 <p>Il y a deux champs important qui sont la <strong>Date de début</strong> et la <strong>date de fin</strong> pour demander les congé on remarque que en bas a droite on a le solde de congé actuellement.</p>
 <h4 id="interface-rh">Interface RH<a class="headerlink" href="#interface-rh" title="Permanent link">&para;</a></h4>
-<p><img alt="InterfaceRH" src="../image/interfaceRHC.JPG" /></p>
+<p><img alt="InterfaceRH" src="../image/mission1/interfaceRHC.JPG" /></p>
 <p>On remarque une ListeView ou iront tout les praticiens qui demande des congé. Pour accepter il suffit de séléctionner et cliquer soit sur accepté ou sois refusé.</p>
 <h3 id="les-parties-complexe-du-codes">Les parties complexe du codes<a class="headerlink" href="#les-parties-complexe-du-codes" title="Permanent link">&para;</a></h3>
+<h4 id="interface-admin">Interface Admin<a class="headerlink" href="#interface-admin" title="Permanent link">&para;</a></h4>
+<p>Le code que l'on remarque ci-contre sert à récupéré toute les demandes et les affichés. </p>
+<div class="language-c# highlight"><span class="filename">Admin_Load</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">bdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BDD</span><span class="p">(</span><span class="s">&quot;AP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;APSIO2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;172.23.48.2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;gsb&quot;</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">bdd</span><span class="p">.</span><span class="n">Connecter</span><span class="p">();</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">listeConge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bdd</span><span class="p">.</span><span class="n">ChargerConge</span><span class="p">();</span><span class="w"> </span><span class="c1">//récupéré les congé</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">View</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">View</span><span class="p">.</span><span class="n">Details</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Nom&quot;</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Prénom&quot;</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Date Début&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">);</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">lvadmin</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Date Fin&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Conge</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">listeConge</span><span class="p">)</span><span class="w"> </span><span class="c1">//les affiché dans une listes views</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">etat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ListViewItem</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">item</span><span class="p">.</span><span class="n">SubItems</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">praticien</span><span class="p">.</span><span class="n">nom</span><span class="p">);</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="n">item</span><span class="p">.</span><span class="n">SubItems</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">praticien</span><span class="p">.</span><span class="n">prenom</span><span class="p">);</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="n">item</span><span class="p">.</span><span class="n">SubItems</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">date_debut</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd&quot;</span><span class="p">));</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="n">item</span><span class="p">.</span><span class="n">SubItems</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="n">date_fin</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd&quot;</span><span class="p">));</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="n">lvadmin</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="bdd">BDD<a class="headerlink" href="#bdd" title="Permanent link">&para;</a></h4>
+<p>Fonctionnement du chargé congé:</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Conge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listeConge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Conge</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">MySqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">MySqlDataReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">try</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="c1">// ✅ Vérifie et ouvre la connexion si nécessaire</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">connection</span><span class="p">.</span><span class="n">State</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ConnectionState</span><span class="p">.</span><span class="n">Open</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">requete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s">    SELECT c.id, c.id_praticien, c.date_debut, c.date_fin, c.état,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="s">           p.nom, p.prenom, p.id_ville, p.solde_congé</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s">    FROM congé c</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s">    INNER JOIN praticien p ON c.id_praticien = p.id</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="s">    WHERE c.état = 1;&quot;</span><span class="p">;</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MySqlCommand</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">);</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">();</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">id_praticien</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;id_praticien&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">            </span><span class="n">DateTime</span><span class="w"> </span><span class="n">date_debut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToDateTime</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;date_debut&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">            </span><span class="n">DateTime</span><span class="w"> </span><span class="n">date_fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToDateTime</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;date_fin&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">etat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;état&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;nom&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;prenom&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">id_ville</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;id_ville&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">            </span><span class="kt">decimal</span><span class="w"> </span><span class="n">solde_conge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToDecimal</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;solde_congé&quot;</span><span class="p">]);</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">            </span><span class="c1">//création des objets</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">            </span><span class="n">Practicien</span><span class="w"> </span><span class="n">prat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Practicien</span><span class="p">(</span><span class="n">id_praticien</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">id_ville</span><span class="p">,</span><span class="w"> </span><span class="n">solde_conge</span><span class="p">);</span><span class="w"> </span><span class="c1">//création des praticiens</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">            </span><span class="n">Conge</span><span class="w"> </span><span class="n">conge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Conge</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">id_praticien</span><span class="p">,</span><span class="w"> </span><span class="n">date_debut</span><span class="p">,</span><span class="w"> </span><span class="n">date_fin</span><span class="p">,</span><span class="w"> </span><span class="n">etat</span><span class="p">);</span><span class="w"> </span><span class="c1">//création des conges</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">            </span><span class="n">conge</span><span class="p">.</span><span class="n">praticien</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prat</span><span class="p">;</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">            </span><span class="n">listeConge</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">conge</span><span class="p">);</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">    </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Erreur SQL : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">    </span><span class="k">finally</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">reader</span><span class="p">.</span><span class="n">IsClosed</span><span class="p">)</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">            </span><span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmd</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">            </span><span class="n">cmd</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">listeConge</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Affiché les messages lors de la connexion.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">try</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">requete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT id_notif, message FROM notification WHERE id_receveur = @id AND id_etat = 2&quot;</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">     </span><span class="c1">//récupére que les notif du prat connecté et seulement les pas lu</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">MySqlCommand</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MySqlCommand</span><span class="p">(</span><span class="n">requete</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">cmd</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">&quot;@id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">idp</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">MySqlDataReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmd</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">())</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;message&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">idNotification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;id_notif&quot;</span><span class="p">]);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">                </span><span class="n">DialogResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                    </span><span class="n">message</span><span class="p">,</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                    </span><span class="s">&quot;Message du RH&quot;</span><span class="p">,</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">                    </span><span class="n">MessageBoxButtons</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">                    </span><span class="n">MessageBoxIcon</span><span class="p">.</span><span class="n">Information</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">                </span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DialogResult</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">                </span><span class="p">{</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">                    </span><span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">                    </span><span class="n">MarquerCommeLu</span><span class="p">(</span><span class="n">idNotification</span><span class="p">);</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                    </span><span class="n">AfficherMessage</span><span class="p">(</span><span class="n">idp</span><span class="p">);</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="p">}</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="p">{</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Erreur : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
