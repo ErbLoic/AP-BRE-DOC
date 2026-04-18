@@ -6,50 +6,88 @@ icon: lucide/rocket
 
 ## Introduction
 
-Ceci est la documentation officielle pour les Mission d'AP SIO 2 pour la région Bretagne lors de l'année 2025 - 2026.
+Ceci est la documentation officielle des missions **AP SIO 2** pour la région Bretagne — année scolaire **2025-2026**.
 
-Réaliser par **Djerba Ywel** et **Erbuer Loïc**.
+Réalisée par **Djerba Ywel** et **Erbuer Loïc**.
 
-Lors de cette page vous allez retrouver les différentes mission faites lors de cette année.
+Ce projet comprend trois applications interconnectées autour d'un système de gestion RH pour le réseau **GSB (Groupement de Santé Bretagne)**. Ces applications partagent la même base de données MySQL et le même domaine métier : la gestion des praticiens de santé.
 
-Les différentes Missions:
+---
 
-- Mission 0 : Mise en place du réseau de développement
+## Infrastructure réseau (Mission 0)
 
-- Mission 1 : Application en C#
+Lors de cette mission nous avons mis en place une infrastructure simple de réseau. Voici un tableau récapitulatif des rôles et adresses IP :
 
-- Mission 2 : Application web en Laravel
-
-- Mission 3 : Application mobile en Flutter
-
-## Description
-
-### Mission 0
-
-Lors de cette mission nous avons mis en place une infrastructure simple de réseaux. Voici un tableau récapitulatif des rôles et adresse IP:
-
-|Rôle   | Adresse IPv4 |
-|-------|--------------|
-| Serveur Web | 172.23.48.1 |
-| Serveur BDD | 172.23.48.2 |
+| Rôle | Adresse IPv4 |
+|------|--------------|
+| Serveur Web (Laravel) | 172.23.48.1 |
+| Serveur BDD (MySQL) | 172.23.48.2 |
 | Poste développeur 1 | 172.23.48.10 |
 | Poste développeur 2 | 172.23.48.11 |
 | Poste Production | 172.23.48.20 |
 
-### Mission 1
+---
 
-Cette Mission permet de faciliter la prise de congé en faisant des demandes de congé et un RH peut accepter ou refusé.
+## Vue d'ensemble des missions
 
-[Détail ici](mission1.md)
+### Mission 1 — GSBConge (Application Desktop C#)
 
-### Mission 2
+Application **Windows Forms (.NET 8)** permettant la gestion des demandes de congé :
+- Les praticiens soumettent des demandes de congé avec dates de début/fin
+- Le RH consulte les demandes en attente et les **accepte ou refuse**
+- Les praticiens reçoivent des **notifications** du RH à leur prochaine connexion
+- Le solde de congé est mis à jour automatiquement via des **procédures stockées MySQL**
 
-Cette Mission consiste à pouvoir gérer l'ancienneté des praticiens et de consulter leur salire. Seul un membre du RH peut y aller
+[Voir la documentation complète →](mission1.md)
 
-[Détail ici](mission2.md)
+---
 
-### Mission 3
+### Mission 2 — GSBRH (Application Web Laravel)
 
-Cette mission sert à consulter les notes et commentaires de chacun des praticiens mis par soit un expert ou un client.
+Application web **Laravel 12 / PHP 8.2** servant de système RH central :
+- Interface web Bootstrap pour les membres RH (consultation, recherche, ancienneté)
+- **API REST avec JWT** consommée par l'application mobile Flutter
+- Gestion des praticiens : informations, échelons salariaux, ancienneté
+- Système de notation (notes clients et experts)
+- Documentation API auto-générée via **Swagger / OpenAPI**
 
-[Détail ici](mission3.md)
+[Voir la documentation complète →](mission2.md)
+
+---
+
+### Mission 3 — GSBNote (Application Mobile Flutter)
+
+Application **Flutter / Dart** multi-plateforme (Android, iOS, Windows…) :
+- Consultation de la liste des praticiens avec **recherche en temps réel**
+- Affichage du détail d'un praticien avec ses notes **clients** et **experts**
+- Soumission de nouvelles notes (commentaire + score de 1 à 10)
+- Authentification **JWT** via l'API GSBRH
+
+[Voir la documentation complète →](mission3.md)
+
+---
+
+## Schéma d'intégration
+
+```
+┌─────────────────────┐        ┌──────────────────────────┐
+│   GSBConge (C#)     │        │     GSBNote (Flutter)    │
+│   Desktop Windows   │        │  Mobile / Multi-platform │
+└────────┬────────────┘        └────────────┬─────────────┘
+         │ SQL direct                        │ HTTP REST + JWT
+         │                                   │
+         ▼                                   ▼
+┌─────────────────────────────────────────────────────────┐
+│              MySQL — 172.23.48.2 — BDD gsb              │
+│                                                         │
+│  praticien · congé · connexion · note · notification    │
+│  echelon · ville · expert · etat · etat_lecture         │
+└────────────────────────────┬────────────────────────────┘
+                             │ Eloquent ORM
+                             ▼
+                  ┌─────────────────────┐
+                  │    GSBRH (Laravel)  │
+                  │    172.23.48.1      │
+                  │  API REST + Web UI  │
+                  └─────────────────────┘
+```
