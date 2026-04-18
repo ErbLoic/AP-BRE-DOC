@@ -1,0 +1,1322 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../mission2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.11">
+    
+    
+      
+        <title>Mission 3 : Application Mobile Flutter — GSBNote - Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.bd6182e7.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mission-3-application-mobile-flutter-gsbnote" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mission 3 : Application Mobile Flutter — GSBNote
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Recherche">
+  <button type="button" class="md-search__button">
+    Recherche
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission1/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-app-window" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v4M2 8h20M6 4v4"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission 1 : Application Desktop C# — GSBConge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission2/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission 2 : Application Web Laravel — GSBRH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission 3 : Application Mobile Flutter — GSBNote
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission 3 : Application Mobile Flutter — GSBNote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Présentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Technique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchie-des-ecrans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hiérarchie des écrans
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeles-de-donnees-reponses-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modèles de données (réponses API)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modèles de données (réponses API)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#praticien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Praticien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-api-consommes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints API consommés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-des-ecrans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des écrans
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description des écrans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecran-de-connexion-login_pagedart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écran de connexion (login_page.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accueil-liste-des-praticiens-home_screendart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accueil — Liste des praticiens (home_screen.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detail-dun-praticien-detailsdart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Détail d'un praticien (details.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logique-metier-cle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logique Métier Clé
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logique Métier Clé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-dauthentification-auth_servicedart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service d'authentification (auth_service.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-des-notes-client-vs-expert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrage des notes (client vs expert)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-en-temps-reel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherche en temps réel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI / UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-avec-gsbrh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration avec GSBRH
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Présentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Technique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchie-des-ecrans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hiérarchie des écrans
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeles-de-donnees-reponses-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modèles de données (réponses API)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modèles de données (réponses API)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#praticien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Praticien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints-api-consommes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoints API consommés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-des-ecrans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description des écrans
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description des écrans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecran-de-connexion-login_pagedart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écran de connexion (login_page.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accueil-liste-des-praticiens-home_screendart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accueil — Liste des praticiens (home_screen.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detail-dun-praticien-detailsdart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Détail d'un praticien (details.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logique-metier-cle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logique Métier Clé
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logique Métier Clé">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-dauthentification-auth_servicedart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service d'authentification (auth_service.dart)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage-des-notes-client-vs-expert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtrage des notes (client vs expert)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recherche-en-temps-reel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherche en temps réel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI / UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-avec-gsbrh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intégration avec GSBRH
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="mission-3-application-mobile-flutter-gsbnote">Mission 3 : Application Mobile Flutter — GSBNote<a class="headerlink" href="#mission-3-application-mobile-flutter-gsbnote" title="Permanent link">&para;</a></h1>
+<h2 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">&para;</a></h2>
+<h3 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h3>
+<p><strong>GSBNote</strong> est une application mobile multi-plateforme développée avec <strong>Flutter / Dart</strong>. Elle permet de consulter les praticiens du réseau GSB (Groupement de Santé Bretagne) ainsi que leurs notes et commentaires, émis soit par des <strong>clients</strong>, soit par des <strong>experts</strong>.</p>
+<p>Les fonctionnalités principales sont :
+- Connexion sécurisée avec <strong>JWT</strong> (token fourni par l'API GSBRH)
+- Consultation de la liste des praticiens avec recherche en temps réel
+- Affichage du détail d'un praticien (profil + notes)
+- Séparation des notes <strong>clients</strong> et <strong>experts</strong> via des onglets
+- Soumission d'une nouvelle note (commentaire + score) — réservée aux utilisateurs connectés
+- Gestion des erreurs réseau avec écrans dédiés</p>
+<blockquote>
+<p>GSBNote ne possède <strong>aucune base de données locale</strong>. Toute la donnée est fournie par l'<strong>API REST de GSBRH</strong> hébergée sur <code>http://172.23.48.1</code>.</p>
+</blockquote>
+<hr />
+<h2 id="stack-technique">Stack Technique<a class="headerlink" href="#stack-technique" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Technologie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Langage</td>
+<td>Dart</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Flutter 3.9.2+</td>
+</tr>
+<tr>
+<td>HTTP Client</td>
+<td><code>http ^0.13.6</code></td>
+</tr>
+<tr>
+<td>Authentification</td>
+<td>JWT Bearer Token</td>
+</tr>
+<tr>
+<td>UI</td>
+<td>Material Design 3</td>
+</tr>
+<tr>
+<td>Plateformes supportées</td>
+<td>Android, iOS, Windows, macOS, Linux</td>
+</tr>
+<tr>
+<td>Gestion d'état</td>
+<td><code>StatefulWidget</code> (réactif)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GSBNote/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── lib/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── main.dart             # Point d&#39;entrée (widget Appreciations)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── auth_service.dart     # Service d&#39;authentification JWT (singleton)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├── login_page.dart       # Écran de connexion
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── home_screen.dart      # Liste des praticiens (Accueil)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── details.dart          # Détail praticien + onglets notes
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── pubspec.yaml              # Dépendances et configuration Flutter
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── android/                  # Config Android
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── ios/                      # Config iOS
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── windows/                  # Config Windows
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── macos/                    # Config macOS
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── linux/                    # Config Linux
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>└── test/                     # Tests unitaires
+</span></code></pre></div>
+<h3 id="hierarchie-des-ecrans">Hiérarchie des écrans<a class="headerlink" href="#hierarchie-des-ecrans" title="Permanent link">&para;</a></h3>
+<p>Au démarrage, l'application charge directement l'écran d'accueil. Si l'utilisateur tente une action nécessitant une authentification (ex. soumettre une note), il est redirigé vers la page de connexion. Une fois authentifié, il peut accéder aux fonctionnalités complètes.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>main() → Appreciations → Accueil (liste praticiens)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>                              │
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                              ├── [non connecté] → LoginPage → retour Accueil
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                              │
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                              └── [tap praticien] → Details (fiche + notes)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                                                        └── [connecté] → Formulaire ajout note
+</span></code></pre></div>
+<hr />
+<h2 id="modeles-de-donnees-reponses-api">Modèles de données (réponses API)<a class="headerlink" href="#modeles-de-donnees-reponses-api" title="Permanent link">&para;</a></h2>
+<h3 id="praticien">Praticien<a class="headerlink" href="#praticien" title="Permanent link">&para;</a></h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;nom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dupont&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;prenom&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jean&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;adresse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Rue de Paris&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;ville&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35001</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;nom_ville&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RENNES&quot;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&quot;nom_reel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rennes&quot;</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">&quot;code_postal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;35000&quot;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nt">&quot;note_client&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.5</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">&quot;note_expert&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.8</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="nt">&quot;note_global&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">4.65</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;commentaires&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Très bon praticien, à l&#39;écoute.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">&quot;id_praticiens&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">&quot;id_expert&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">&quot;concerne&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<blockquote>
+<p>Si <code>id_expert</code> est <code>null</code> → c'est une note <strong>client</strong>.<br />
+Si <code>id_praticiens</code> est <code>null</code> → c'est une note <strong>expert</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="endpoints-api-consommes">Endpoints API consommés<a class="headerlink" href="#endpoints-api-consommes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th>Endpoint</th>
+<th>Auth</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/login</code></td>
+<td>Public</td>
+<td>Connexion → retourne le JWT</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/praticiens</code></td>
+<td>Public</td>
+<td>Liste tous les praticiens</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/praticiens/{id}</code></td>
+<td>Public</td>
+<td>Détail d'un praticien</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/praticiens/search?search={query}</code></td>
+<td>Public</td>
+<td>Recherche par nom</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/notes/{id}</code></td>
+<td>Public</td>
+<td>Notes d'un praticien</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/note/create</code></td>
+<td>JWT</td>
+<td>Soumettre une nouvelle note</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="description-des-ecrans">Description des écrans<a class="headerlink" href="#description-des-ecrans" title="Permanent link">&para;</a></h2>
+<h3 id="ecran-de-connexion-login_pagedart">Écran de connexion (<code>login_page.dart</code>)<a class="headerlink" href="#ecran-de-connexion-login_pagedart" title="Permanent link">&para;</a></h3>
+<p>L'écran de connexion affiche deux champs : <strong>email</strong> et <strong>mot de passe</strong>. Lors de la soumission, une requête <code>POST /api/auth/login</code> est envoyée à l'API GSBRH. En cas de succès, le <strong>token JWT</strong> est stocké dans le singleton <code>AuthService</code> et l'utilisateur est renvoyé vers l'écran précédent. En cas d'échec (identifiants incorrects ou erreur réseau), un message d'erreur est affiché via une <code>SnackBar</code>.</p>
+<h3 id="accueil-liste-des-praticiens-home_screendart">Accueil — Liste des praticiens (<code>home_screen.dart</code>)<a class="headerlink" href="#accueil-liste-des-praticiens-home_screendart" title="Permanent link">&para;</a></h3>
+<p>L'écran principal affiche la liste complète des praticiens sous forme de <strong>cartes Material</strong>. Chaque carte affiche :
+- Nom et prénom du praticien
+- Note globale (avec icône étoile)
+- Ville de rattachement</p>
+<p>Un champ de recherche permet de filtrer les résultats <strong>en temps réel</strong> via l'endpoint <code>GET /api/praticiens/search?search=</code>. Si aucun résultat n'est trouvé, un écran "aucun résultat" est affiché. En cas d'erreur réseau, un écran d'erreur dédié est présenté avec un bouton pour réessayer.</p>
+<p>Un <code>PopupMenuButton</code> dans l'AppBar permet à l'utilisateur de se déconnecter ou de consulter son profil.</p>
+<h3 id="detail-dun-praticien-detailsdart">Détail d'un praticien (<code>details.dart</code>)<a class="headerlink" href="#detail-dun-praticien-detailsdart" title="Permanent link">&para;</a></h3>
+<p>La page de détail affiche la fiche complète du praticien sélectionné. Elle comprend :
+- Un <strong>SliverAppBar</strong> avec fond en dégradé (couleur primaire → secondaire) qui se replie au défilement
+- Les informations personnelles du praticien (adresse, ville)
+- Ses trois scores : note client, note expert, note globale
+- Un <strong>TabBar</strong> avec deux onglets :
+  - <strong>Notes Clients</strong> : commentaires laissés par des clients (filtrés par <code>id_expert == null</code>)
+  - <strong>Notes Experts</strong> : évaluations laissées par des experts (filtrés par <code>id_expert != null</code>)</p>
+<p>Un <strong>bouton flottant (FAB)</strong> permet d'ouvrir un formulaire modal pour soumettre une nouvelle note (champ commentaire + score de 1 à 10). Cette action nécessite d'être connecté — si ce n'est pas le cas, l'utilisateur est redirigé vers la page de connexion.</p>
+<hr />
+<h2 id="logique-metier-cle">Logique Métier Clé<a class="headerlink" href="#logique-metier-cle" title="Permanent link">&para;</a></h2>
+<h3 id="service-dauthentification-auth_servicedart">Service d'authentification (<code>auth_service.dart</code>)<a class="headerlink" href="#service-dauthentification-auth_servicedart" title="Permanent link">&para;</a></h3>
+<p><code>AuthService</code> est un <strong>singleton</strong> qui centralise la gestion du token JWT sur toute la durée de vie de l'application :</p>
+<div class="language-dart highlight"><span class="filename">auth_service.dart — Structure</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AuthService</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">AuthService</span><span class="w"> </span><span class="n">_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AuthService</span><span class="p">.</span><span class="n">_internal</span><span class="p">();</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="kd">factory</span><span class="w"> </span><span class="n">AuthService</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="n">AuthService</span><span class="p">.</span><span class="n">_internal</span><span class="p">();</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">_token</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">_userEmail</span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">_userId</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">_privileges</span><span class="p">;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="kd">get</span><span class="w"> </span><span class="n">isLoggedIn</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">login</span><span class="p">(</span><span class="kt">String</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">password</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1">// POST /api/auth/login</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="c1">// Stocke le token en cas de succès</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getAuthHeaders</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">      </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bearer </span><span class="si">$</span><span class="n">_token</span><span class="s1">&#39;</span><span class="p">,</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">      </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">logout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="n">_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="n">_userEmail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="n">_userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="filtrage-des-notes-client-vs-expert">Filtrage des notes (client vs expert)<a class="headerlink" href="#filtrage-des-notes-client-vs-expert" title="Permanent link">&para;</a></h3>
+<p>Lors du chargement des notes d'un praticien, l'application sépare les résultats en deux listes selon la présence ou non du champ <code>id_expert</code> :</p>
+<div class="language-dart highlight"><span class="filename">details.dart — Filtrage</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">List</span><span class="w"> </span><span class="n">notesClients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notes</span><span class="p">.</span><span class="n">where</span><span class="p">((</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">[</span><span class="s1">&#39;id_expert&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">).</span><span class="n">toList</span><span class="p">();</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">List</span><span class="w"> </span><span class="n">notesExperts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notes</span><span class="p">.</span><span class="n">where</span><span class="p">((</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">[</span><span class="s1">&#39;id_expert&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">).</span><span class="n">toList</span><span class="p">();</span>
+</span></code></pre></div>
+<h3 id="recherche-en-temps-reel">Recherche en temps réel<a class="headerlink" href="#recherche-en-temps-reel" title="Permanent link">&para;</a></h3>
+<p>La barre de recherche envoie une requête à l'API à chaque modification du champ texte. Un bouton "croix" permet d'effacer la recherche et de revenir à la liste complète :</p>
+<div class="language-dart highlight"><span class="filename">home_screen.dart — Recherche</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nl">onChanged:</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">// Recharge la liste complète</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">_loadPraticiens</span><span class="p">();</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;http://172.23.48.1/api/praticiens/search?search=</span><span class="si">$</span><span class="n">value</span><span class="s1">&#39;</span><span class="p">),</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="n">praticiens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">results</span><span class="p">.</span><span class="n">body</span><span class="p">)[</span><span class="s1">&#39;data&#39;</span><span class="p">];</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="ui-ux">UI / UX<a class="headerlink" href="#ui-ux" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CustomScrollView + SliverAppBar</code></td>
+<td>En-tête déroulant sur la page de détail</td>
+</tr>
+<tr>
+<td>Dégradé de couleurs</td>
+<td>Fond AppBar en <code>LinearGradient</code> (primaire → secondaire)</td>
+</tr>
+<tr>
+<td>Cartes Material</td>
+<td>Affichage des praticiens dans la liste</td>
+</tr>
+<tr>
+<td><code>TabBar</code></td>
+<td>Onglets Notes Clients / Notes Experts dans le détail</td>
+</tr>
+<tr>
+<td><code>CircularProgressIndicator</code></td>
+<td>Indicateur de chargement lors des appels API</td>
+</tr>
+<tr>
+<td><code>SnackBar</code></td>
+<td>Retours visuels (succès / erreur) lors de la soumission d'une note</td>
+</tr>
+<tr>
+<td>Écran d'erreur réseau</td>
+<td>Affiché si l'API est inaccessible, avec bouton "Réessayer"</td>
+</tr>
+<tr>
+<td>Icônes Material</td>
+<td><code>Icons.search_rounded</code>, <code>Icons.person_rounded</code>, <code>Icons.star_outline_rounded</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="integration-avec-gsbrh">Intégration avec GSBRH<a class="headerlink" href="#integration-avec-gsbrh" title="Permanent link">&para;</a></h2>
+<p>GSBNote fonctionne entièrement comme un <strong>client de l'API GSBRH</strong>. La logique métier (authentification, gestion des praticiens, des notes) est entièrement déléguée au backend Laravel.</p>
+<p>Le token JWT obtenu lors de la connexion est transmis dans le header de chaque requête protégée :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Authorization: Bearer &lt;token&gt;
+</span></code></pre></div>
+<p>Seule la soumission d'une note (<code>POST /api/note/create</code>) nécessite ce token. La consultation des praticiens et de leurs notes est <strong>publique</strong> et accessible sans connexion.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../mission2/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Mission 2 : Application Web Laravel — GSBRH">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Mission 2 : Application Web Laravel — GSBRH
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.5df7522c.min.js","tags":null,"translations":{"clipboard.copied":"Copié dans le presse-papier","clipboard.copy":"Copier dans le presse-papier","search.result.more.one":"1 de plus sur cette page","search.result.more.other":"# de plus sur cette page","search.result.none":"Aucun document trouvé","search.result.one":"1 document trouvé","search.result.other":"# documents trouvés","search.result.placeholder":"Taper pour démarrer la recherche","search.result.term.missing":"Non trouvé","select.version":"Sélectionner la version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.21aa498e.min.js"></script>
+      
+    
+  </body>
+</html>
